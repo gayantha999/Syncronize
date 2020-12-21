@@ -12,7 +12,7 @@ public class Send {
         catch(Exception e){
             System.out.println("Thread interuptred");
         }
-        System.out.println("\n" +msg + "Sent");
+        System.out.println("\n" +msg + "Sent ");
     }
 }
 
@@ -34,7 +34,9 @@ class main{
     public static void main (String args[]){
         Send snd=new Send();
         thrededSend th1=new thrededSend("HI ",snd);
+        System.out.println("msg sent");
         thrededSend th2=new thrededSend("Bye ", snd);
+
     th1.start();
     th2.start();
     try {
